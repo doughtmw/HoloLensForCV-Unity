@@ -5,6 +5,8 @@ Incorporates:
 - [HoloLensForCV](https://github.com/microsoft/HoloLensForCV) sample from Microsoft 
 - [depthPvMapper](https://github.com/cyberj0g/HoloLensForCV/blob/master/Samples/ComputeOnDevice/DepthPvMapper.cpp) from cyberj0g
 
+![Pv depth camera sample](https://github.com/doughtmw/HoloLensForCV-Unity/blob/master/HoloLens-PvDepth-Example.jpg)
+
 ## Requirements
 - Tested with [Unity 2018.4 LTS](https://unity3d.com/unity/qa/lts-releases
 )
