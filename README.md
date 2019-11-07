@@ -33,7 +33,6 @@ Incorporates:
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" 
   IgnorableNamespaces="uap uap2 uap3 uap4 mp mobile iot rescap" 
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"> 
->
 ```
 - Modified capabilities with with new package:
 ```xml
