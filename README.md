@@ -1,5 +1,5 @@
 # HoloLensForCV-Unity
-HoloLens research mode streams made available for use in Unity through [IL2CPP Windows Runtime support](https://docs.unity3d.com/2018.4/Documentation/Manual/IL2CPP-WindowsRuntimeSupport.html). 
+HoloLens research mode streams made available for use in Unity through [IL2CPP Windows Runtime support](https://docs.unity3d.com/2018.4/Documentation/Manual/IL2CPP-WindowsRuntimeSupport.html). See my [blog post](https://doughtmw.github.io/posts/HoloLensForCV-Unity-1) for more information on the sample.
 
 Incorporates:
 - [HoloLensForCV](https://github.com/microsoft/HoloLensForCV) sample from Microsoft 
