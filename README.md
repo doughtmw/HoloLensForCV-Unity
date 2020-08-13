@@ -10,16 +10,27 @@ Incorporates:
 ## Requirements
 - Tested with [Unity 2018.4 LTS](https://unity3d.com/unity/qa/lts-releases
 )
-- [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
+- [Visual Studio 2017/2019](https://visualstudio.microsoft.com/downloads/)
 - Minimum [RS4](https://docs.microsoft.com/en-us/windows/mixed-reality/release-notes-april-2018), tested with [OS Build 17763.678](https://support.microsoft.com/en-ca/help/4511553/windows-10-update-kb4511553)
 - HoloLens with **research mode enabled**
 
 ## Sensor Stream Sample
-1. Open HoloLensForCV sample in VS2017 and install included OpenCV nuget package to HoloLensForCV project
-2. Build the HoloLensForCV project (x86, Debug or Release) 
-3. Copy all output files from HoloLensForCV output path (dlls and HoloLensForCV.winmd) to the Assets->Plugins->x86 folder of the HoloLensForCVUnity project
-4. Open HoloLensForCVUnity Unity project and build using IL2CPP, allow unsafe code under Unity Player Settings->Other Settings
-5. Navigate to Unity project build folder and modify the Package.appxmanifest file to include: 
+1. Git clone repo. From the main project directory, clone submodules with:
+```
+git submodule update --init
+```
+2. Copy precompiled dlls and HoloLensForCV.winmd file from the **Prebuilt->x86** folder to the **Assets->Plugins->x86** folder of the HoloLensForCVUnity project. 
+
+*Optional: build project from source*
+- Open HoloLensForCV sample in VS2017/2019 and install included OpenCV nuget package to HoloLensForCV project. In the nuget package manager type:
+```
+Install-Package ..\OpenCV.HoloLens.3411.0.0.nupkg -ProjectName HoloLensForCV
+```
+- Build the HoloLensForCV project (x86, Debug or Release) 
+- Copy all output files from HoloLensForCV output path (dlls and HoloLensForCV.winmd) to the **Assets->Plugins->x86 folder** of the HoloLensForCVUnity project
+
+3. Open HoloLensForCVUnity Unity project and build using IL2CPP, allow unsafe code under Unity Player Settings->Other Settings
+4. Navigate to Unity project build folder and modify the Package.appxmanifest file to include: 
 - Restricted capabilities package:
 ```xml 
 <Package 
@@ -45,4 +56,4 @@ Incorporates:
     <DeviceCapability Name="webcam" />
   </Capabilities>
 ```
-6. Open VS solution, build then deploy to device
+5. Open VS solution, build then deploy to device
